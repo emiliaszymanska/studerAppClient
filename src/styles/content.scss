@@ -1,0 +1,214 @@
+/*----------------------------------------------------
+ 5. CONTENT
+----------------------------------------------------*/
+/*----------------------------------------------------
+ 5.1 HEADER
+----------------------------------------------------*/
+.content-header {
+  width: 100%;
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+  position: fixed;
+  z-index: 99;
+  background-color: $color-background-first;
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.content-header--layout {
+  justify-content: space-between;
+}
+
+.content-header--logo {
+  z-index: 50;
+}
+
+#content-header--hamburger-menu {
+  display: none;
+}
+
+.content-header--menu-collapsed {
+  position: relative;
+  z-index: 50;
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+  cursor: pointer;
+}
+
+.content-header--menu-collapsed::before,
+.content-header--menu-collapsed::after {
+  position: absolute;
+  width: 1.15rem;
+  height: 0.15rem;
+  left: 0;
+  content: "";
+  background: $color-main;
+  transition: all 300ms;
+}
+
+.content-header--menu-collapsed::before {
+  top: 0.3rem;
+}
+
+.content-header--menu-collapsed::after {
+  top: 0.7rem;
+}
+
+#content-header--hamburger-menu:checked ~ .content-header--menu-collapsed::before {
+  transform: translateY(3px) rotate(135deg);
+}
+
+#content-header--hamburger-menu:checked ~ .content-header--menu-collapsed::after {
+  transform: translateY(-3px) rotate(-135deg);
+}
+
+.content-header--navigation {
+  position: absolute;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+  padding: 8rem $layout-container-space 2.5rem;
+  gap: $gap-header;
+  background-color: $color-background-first;
+  opacity: 0;
+  box-shadow: 0 0.1rem 0.7rem rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+}
+
+#content-header--hamburger-menu:checked ~ .content-header--navigation {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.content-header--navigation-link {
+  font-size: $font-h3;
+}
+
+/*----------------------------------------------------
+ 5.2 HERO
+----------------------------------------------------*/
+.content-hero {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.content-hero-header {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  padding-left: $layout-container-space;
+  padding-right: $layout-container-space;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-hero-header > h1 {
+  margin-top: 7rem;
+  color: $color-1;
+  text-align: right;
+  font-size: $font-h2;
+}
+
+.hero-image {
+  margin-top: 1.2rem;
+  margin-bottom: 0.9rem;
+}
+
+/*----------------------------------------------------
+ 5.3 FUNDAMENTALS
+----------------------------------------------------*/
+.content-fundamentals {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: $color-background-second;
+  text-align: center;
+}
+
+.content-fundamentals--layout {
+  margin-top: $gap-fundamentals;
+  margin-bottom: $gap-fundamentals;
+  row-gap: $gap-card;
+  justify-content: initial;
+}
+
+.element-card--fundamentals {
+  padding: 1.5rem 1.5rem 1.75rem;
+  background-color: $color-background-first;
+  text-align: center;
+}
+
+.element-wrapper {
+  grid-template-columns: 1fr;
+  grid-template-rows: 2.18fr 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.element-list--fundamentals {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/*----------------------------------------------------
+ 5.4 FEATURES
+----------------------------------------------------*/
+.content-feature-first,
+.content-feature-second {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.content-feature--layout {
+  row-gap: $gap-features;
+}
+
+.content-feature--layout:first-of-type div {
+  grid-row-start: 1;
+}
+
+.content-feature--layout:last-of-type {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content-feature-second {
+  background-color: $color-background-second;
+}
+
+/*----------------------------------------------------
+ 5.5 CLOSING
+----------------------------------------------------*/
+.content-closing {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: $color-background-first;
+  text-align: center;
+}
+
+/*----------------------------------------------------
+ 5.6 FOOTER
+----------------------------------------------------*/
+.content-footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: $color-6;
+}
+
+.content-footer--layout {
+  column-gap: $gap-footer;
+}
+
+.content-footer--copyright {
+  margin-bottom: 0;
+  margin-right: auto;
+}
+
+.footer-icon {
+  height: 1.1rem;
+  width: 1.1rem;
+  filter: invert(56%) sepia(12%) saturate(11%) hue-rotate(352deg) brightness(97%) contrast(86%);
+}
