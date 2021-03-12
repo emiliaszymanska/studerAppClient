@@ -1,0 +1,55 @@
+/*--------------------------------------------------
+ 3. FONTS
+--------------------------------------------------*/
+h1,
+h2,
+p,
+ul {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  margin-bottom: $font-margin-heading;
+}
+
+h1 {
+  font-size: $font-h1;
+  line-height: $font-h1-line-spacing;
+  color: $color-font-heading-main;
+}
+
+h2 {
+  font-family: $font-heading;
+  font-size: $font-h2;
+  line-height: $font-h2-line-spacing;
+  color: $color-font-heading-inner;
+}
+
+a {
+  color: $color-font-link;
+  text-decoration: none;
+}
+
+p,
+ul {
+  margin-bottom: $font-margin-body;
+}
+
+ul {
+  padding-left: 0;
+}
+
+p:last-child,
+ul:last-child {
+  margin-bottom: 0;
+}
+
+small {
+  font-size: $font-small;
+}
+
+strong {
+  font-size: $font-strong;
+  font-weight: 800;
+}

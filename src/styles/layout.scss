@@ -1,0 +1,44 @@
+/*--------------------------------------------------
+ 2. LAYOUT
+--------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  background-color: $color-background-first;
+  color: $color-font-body;
+  font-family: $font-main;
+  font-size: $font-p;
+  line-height: $font-p-line-spacing;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.layout-container {
+  padding-left: $layout-container-space;
+  padding-right: $layout-container-space;
+}
+
+.layout-flex {
+  display: flex;
+}
+
+.layout-grid {
+  display: grid;
+}
+
+.layout-flex,
+.layout-grid {
+  justify-content: center;
+  align-items: center;
+}

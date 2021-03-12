@@ -1,0 +1,72 @@
+/*--------------------------------------------------
+ 1. GLOBAL
+--------------------------------------------------*/
+/*--------------------------------------------------
+ 1.1 COLORS
+--------------------------------------------------*/
+/* COLOR PALETTE */
+$color-main: #4f4f4f;
+$color-1: #ffffff;
+$color-2: #f3f3f3;
+$color-3: #8b8b8b;
+$color-4: #333333;
+$color-5: #202020;
+$color-6: rgba(143, 205, 240, 0.3);
+$color-7: #0090ff;
+$color-8: rgba(202, 245, 174, 0.9);
+
+/* BACKGROUND COLOR */
+$color-background-first: $color-1;
+$color-background-second: $color-2;
+
+/* FONT COLOR */
+$color-font-heading-main: $color-4;
+$color-font-heading-inner: $color-7;
+$color-font-body: $color-5;
+$color-font-button: $color-1;
+$color-font-link: $color-4;
+$color-font-small-text: $color-3;
+
+/*--------------------------------------------------
+ 1.2 LAYOUT
+--------------------------------------------------*/
+$layout-container-space: 1.25rem;
+$layout-main-space: 1rem;
+
+/* BORDER RADIUS */
+$radius-button: 3rem;
+$radius-card: 0.2rem;
+
+/* GAPS */
+$gap-header: 0.8rem;
+$gap-fundamentals: 2rem;
+$gap-card: 1.25rem;
+$gap-cta: 0.75rem;
+$gap-features: 2rem;
+$gap-footer: 2rem;
+
+/*--------------------------------------------------
+ 1.3 FONTS
+--------------------------------------------------*/
+/* FONT MARGIN */
+$font-margin-heading: 0.75rem;
+$font-margin-body: 1.1rem;
+
+/* LINE SPACING */
+$font-h1-line-spacing: 1.2;
+$font-h2-line-spacing: 1.2;
+$font-p-line-spacing: 1.5;
+$font-small-line-spacing: 1;
+
+/* FONT FAMILIES */
+$font-main: "Roboto", sans-serif;
+$font-heading: "Roboto Slab", serif;
+
+/* FONT SIZE */
+$font-h1: 2rem;
+$font-h2: 1.6rem;
+$font-h3: 1.2rem;
+$font-p: 1rem;
+$font-menu: 1.05rem;
+$font-small: 0.85rem;
+$font-strong: 1.4rem;
