@@ -1,0 +1,457 @@
+/*--------------------------------------------------
+ 6. MEDIA QUERIES
+--------------------------------------------------*/
+/*--------------------------------------------------
+ 6.1 768PX
+--------------------------------------------------*/
+@media screen and (min-width: 48rem) {
+  /*------------------------------------------------
+   GLOBAL
+  ------------------------------------------------*/
+    /*----------------------------------------------
+     LAYOUT
+    ----------------------------------------------*/
+    $layout-container-space: 4.25rem;
+    $layout-main-space: 1.5rem;
+    $gap-header: 1.5rem;
+    $gap-card: 1.5rem;
+
+    /*----------------------------------------------
+     FONTS
+    ----------------------------------------------*/
+    /* FONT MARGIN */
+    $font-margin-body: 1.25rem;
+
+    /* FONT SIZE */
+    $font-h1: 2.2rem;
+    $font-h2: 2rem;
+    $font-small: 0.9rem;
+    $font-strong: 1.5rem;
+
+  /*------------------------------------------------
+   LAYOUT
+  ------------------------------------------------*/
+  .layout-container {
+    padding-left: $layout-container-space;
+    padding-right: $layout-container-space;
+  }
+
+  .layout-container,
+  .layout-component-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .layout-grid-2,
+  .layout-grid-3 {
+    column-gap: $layout-main-space;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .layout-grid-3 div:nth-of-type(3) {
+    left: calc(50% + #{$layout-main-space / 2});
+    position: relative;
+  }
+
+  /*------------------------------------------------
+   FONTS
+  ------------------------------------------------*/
+  h1 {
+    font-size: $font-h1;
+  }
+
+  h2 {
+    font-size: $font-h2;
+  }
+
+  p,
+  ul {
+    margin-bottom: $font-margin-body;
+  }
+
+  small {
+    font-size: $font-small;
+  }
+
+  strong {
+    font-size: $font-strong;
+  }
+
+  /*------------------------------------------------
+   ELEMENTS
+  ------------------------------------------------*/
+  /*------------------------------------------------
+   IMAGE
+  ------------------------------------------------*/
+  .image-left {
+    padding-right: $layout-main-space;
+  }
+
+  .image-right {
+    padding-left: $layout-main-space;
+  }
+
+  /*------------------------------------------------
+   VIDEO
+  ------------------------------------------------*/
+  //.video-left {
+  //  max-width: 80%;
+  //  padding-right: initial;
+  //  margin-left: initial;
+  //  border-right: 4rem solid rgba(143, 205, 240, 0.3);
+  //  justify-self: start;
+  //}
+  //
+  //.video-right {
+  //  max-width: 100%;
+  //  padding-left: initial;
+  //  border-left: 2rem solid rgba(202, 245, 174, 0.9);
+  //}
+
+  /*------------------------------------------------
+   CONTENT
+  ------------------------------------------------*/
+  /*------------------------------------------------
+   HEADER
+  ------------------------------------------------*/
+  .content-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .content-header--menu-collapsed {
+    display: none;
+  }
+
+  .content-header--navigation {
+    position: static;
+    padding: 0;
+    flex-direction: row;
+    gap: $gap-header;
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .content-header--navigation-link {
+    font-size: $font-menu;
+    font-weight: 500;
+    padding: 0;
+  }
+
+  /*------------------------------------------------
+   HERO
+  ------------------------------------------------*/
+  .content-hero-header {
+    padding-left: $layout-container-space;
+    padding-right: $layout-container-space;
+  }
+
+  .content-hero-header > h1 {
+    margin-top: 10rem;
+    font-size: $font-h1;
+  }
+
+  .hero-image {
+    margin-top: 0.9rem;
+    margin-bottom: 0.9rem;
+  }
+
+  /*------------------------------------------------
+   FUNDAMENTALS
+  ------------------------------------------------*/
+  .element-card--fundamentals {
+    padding: 2rem 2rem 2.25rem;
+  }
+
+  .content-fundamentals--layout {
+    row-gap: $gap-card;
+  }
+
+  /*------------------------------------------------
+   FEATURES
+  ------------------------------------------------*/
+  .content-feature--layout:first-of-type div {
+    grid-row-start: initial;
+  }
+
+  /*------------------------------------------------
+   FOOTER
+  ------------------------------------------------*/
+  .content-footer {
+    padding-bottom: 2.2rem;
+    padding-top: 2.2rem;
+  }
+}
+
+/*--------------------------------------------------
+ 6.2 1024PX
+--------------------------------------------------*/
+@media screen and (min-width: 64rem) {
+  /*------------------------------------------------
+   GLOBAL
+  ------------------------------------------------*/
+    /*----------------------------------------------
+     LAYOUT
+    ----------------------------------------------*/
+    $layout-container-space: 0.5rem;
+
+    /*----------------------------------------------
+     FONTS
+    ----------------------------------------------*/
+    /* FONT MARGIN */
+    $font-margin-body: 1.25rem;
+
+    /* FONT SIZE */
+    $font-h1: 2.5rem;
+    $font-h2: 2.1rem;
+    $font-h3: 1.2rem;
+    $font-small: 0.9rem;
+
+  /*------------------------------------------------
+   LAYOUT
+  ------------------------------------------------*/
+  .layout-container {
+    padding-left: $layout-container-space;
+    padding-right: $layout-container-space;
+  }
+
+  .layout-container {
+    width: 60rem;
+  }
+
+  .layout-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .layout-grid-3 div:nth-of-type(3) {
+    position: static;
+  }
+
+  /*------------------------------------------------
+   FONTS
+  ------------------------------------------------*/
+  h1 {
+    font-size: $font-h1;
+  }
+
+  h2 {
+    font-size: $font-h2;
+  }
+
+  p,
+  ul {
+    margin-bottom: $font-margin-body;
+  }
+
+  .paragraph-description {
+    font-size: $font-h3;
+  }
+
+  /*------------------------------------------------
+   CONTENT
+  ------------------------------------------------*/
+  /*------------------------------------------------
+   HERO
+  ------------------------------------------------*/
+  .content-hero-header {
+    padding-left: $layout-container-space;
+    padding-right: $layout-container-space;
+  }
+
+  .content-hero-header {
+    width: 60rem;
+  }
+
+  .content-hero-header > h1 {
+    font-size: $font-h1;
+  }
+
+  /*------------------------------------------------
+   FEATURES
+  ------------------------------------------------*/
+  .image-left {
+    max-width: 80%;
+    padding-right: initial;
+    margin-left: initial;
+    justify-self: start;
+    border-right: 4rem solid $color-6;
+  }
+
+  .image-right {
+    max-width: 100%;
+    padding-left: initial;
+    border-left: 2rem solid $color-8;
+  }
+}
+
+/*--------------------------------------------------
+ 6.3 1200PX
+--------------------------------------------------*/
+@media screen and (min-width: 75rem) {
+  /*------------------------------------------------
+   GLOBAL
+  ------------------------------------------------*/
+    /*----------------------------------------------
+     LAYOUT
+    ----------------------------------------------*/
+    $layout-main-space: 3rem;
+    $layout-container-space: 0.5rem;
+    $gap-header: 2rem;
+    $gap-card: 2rem;
+    $gap-fundamentals: 3rem;
+
+    /*----------------------------------------------
+     FONTS
+    ----------------------------------------------*/
+    /* FONT MARGIN */
+    $font-margin-heading: 1rem;
+    $font-margin-body: 1.75rem;
+
+    /* FONT SIZE */
+    $font-h1: 2.75rem;
+    $font-h2: 2.2rem;
+    $font-h3: 1.4rem;
+    $font-strong: 1.5rem;
+
+  /*------------------------------------------------
+   LAYOUT
+  ------------------------------------------------*/
+  .layout-container {
+    width: 70rem;
+    padding-left: $layout-container-space;
+    padding-right: $layout-container-space;
+  }
+
+  .layout-grid-2,
+  .layout-grid-3 {
+    column-gap: $layout-main-space;
+  }
+
+  .layout-grid-3 div:nth-of-type(3) {
+    left: calc(50% + #{$layout-main-space / 2});
+  }
+
+  /*------------------------------------------------
+   FONTS
+  ------------------------------------------------*/
+  h1 {
+    font-size: $font-h1;
+  }
+
+  h2 {
+    margin-bottom: $font-margin-heading;
+    font-size: $font-h2;
+  }
+
+  h3 {
+    font-size: $font-h3;
+  }
+
+  p,
+  ul {
+    margin-bottom: $font-margin-body;
+  }
+
+  .paragraph-description {
+    font-size: $font-h3;
+  }
+
+  strong {
+    font-size: $font-strong;
+  }
+
+  /*------------------------------------------------
+   ELEMENTS
+  ------------------------------------------------*/
+  /*------------------------------------------------
+   BUTTON
+  ------------------------------------------------*/
+  .button-standard {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /*------------------------------------------------
+   CONTENT
+  ------------------------------------------------*/
+  /*------------------------------------------------
+   HEADER
+  ------------------------------------------------*/
+  .content-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .content-header--navigation {
+    gap: $gap-header;
+  }
+
+  /*------------------------------------------------
+   HERO
+  ------------------------------------------------*/
+  .content-hero-header {
+    width: 70rem;
+    padding-left: $layout-container-space;
+    padding-right: $layout-container-space;
+  }
+
+  .content-hero {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .content-hero-header > h1 {
+    font-size: $font-h1;
+  }
+
+  /*------------------------------------------------
+   FUNDAMENTALS
+  ------------------------------------------------*/
+  .content-fundamentals {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+
+  .element-card--fundamentals {
+    padding: 3rem;
+  }
+
+  .content-fundamentals--layout {
+    margin-top: $gap-fundamentals;
+    margin-bottom: $gap-fundamentals;
+    row-gap: $gap-card;
+  }
+
+  /*------------------------------------------------
+   FEATURES
+  ------------------------------------------------*/
+  .content-feature-first,
+  .content-feature-second {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .content-feature--layout:last-of-type {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /*------------------------------------------------
+   CLOSING
+  ------------------------------------------------*/
+  .content-closing {
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+
+  /*------------------------------------------------
+   FOOTER
+  ------------------------------------------------*/
+  .content-footer {
+    padding-top: 3.1rem;
+    padding-bottom: 3.1rem;
+  }
+}
