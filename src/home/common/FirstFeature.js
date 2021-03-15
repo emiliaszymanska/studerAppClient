@@ -10,9 +10,13 @@ function FirstFeature () {
                         <img src="./images/girl-sitting.png" alt="#" className="image-left"/>
                         <div>
                             <h2>Leading you into inspiration</h2>
-                            <p className="paragraph-description">Lorem ipsum dolor sit amet, consec adipiscing elit, sed
-                                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam, q
-                                nostrud exercitation ullamco nisi eq</p>
+                            <p className="paragraph-description first-paragraph">Everyone perceives modern world as
+                                volatile, diverse and complex. For this reason, we deliver the platform that helps
+                                international students to find themselves in a new socio-cultural environment.</p>
+                            <p className="paragraph-description second-paragraph">Discover special places, feel
+                                well-versed and, last but not least, breathe life into your ideas! Create unique,
+                                unforgettable experiences.</p>
+                            <p className="paragraph-description one-word">Confidently.</p>
                         </div>
                     </div>
                 </div>

@@ -175,8 +175,28 @@
   margin-bottom: 1rem;
 }
 
+.first-paragraph, .second-paragraph {
+  margin-bottom: 0.6rem;
+}
+
+.one-word {
+  font-weight: 600;
+}
+
 .content-feature-second {
   background-color: $color-background-second;
+}
+
+.feature-second-wrapper {
+  margin: 0.7rem 1rem;
+}
+
+.feature-second-list {
+  list-style: none;
+}
+
+.fa-check {
+  color: $color-7;
 }
 
 /*----------------------------------------------------

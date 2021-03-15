@@ -20,6 +20,7 @@
      FONTS
     ----------------------------------------------*/
     /* FONT MARGIN */
+    $font-margin-heading: 1.3rem;
     $font-margin-body: 1.25rem;
 
     /* FONT SIZE */
@@ -62,6 +63,7 @@
   }
 
   h2 {
+    margin-bottom: $font-margin-heading;
     font-size: $font-h2;
   }
 
@@ -177,6 +179,10 @@
     grid-row-start: initial;
   }
 
+  .first-paragraph, .second-paragraph {
+    margin-bottom: 0.8rem;
+  }
+
   /*------------------------------------------------
    FOOTER
   ------------------------------------------------*/
@@ -202,6 +208,7 @@
      FONTS
     ----------------------------------------------*/
     /* FONT MARGIN */
+    $font-margin-heading: 1.25rem;
     $font-margin-body: 1.25rem;
 
     /* FONT SIZE */
@@ -238,6 +245,7 @@
   }
 
   h2 {
+    margin-bottom: $font-margin-heading;
     font-size: $font-h2;
   }
 
@@ -307,13 +315,13 @@
      FONTS
     ----------------------------------------------*/
     /* FONT MARGIN */
-    $font-margin-heading: 1rem;
+    $font-margin-heading: 1.25rem;
     $font-margin-body: 1.75rem;
 
     /* FONT SIZE */
     $font-h1: 2.75rem;
     $font-h2: 2.2rem;
-    $font-h3: 1.4rem;
+    $font-h3: 1.35rem;
     $font-strong: 1.5rem;
 
   /*------------------------------------------------
@@ -437,6 +445,10 @@
   .content-feature--layout:last-of-type {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .first-paragraph, .second-paragraph {
+    margin-bottom: 1rem;
   }
 
   /*------------------------------------------------
