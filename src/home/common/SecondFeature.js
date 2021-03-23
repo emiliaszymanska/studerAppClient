@@ -19,8 +19,8 @@ function SecondFeature() {
                                 <b>Yes, that's it.</b> Have fun with your new friends!
                             </div>
                         </div>
-                        {/*<video class="video-right" autoplay loop muted playsinline src="videos/friends.mp4"/>*/}
-                        <img src="/images/friends.png" alt="#" className="image-right"/>
+                        <video className="video-right" autoPlay loop muted playsInline src="videos/friends.mp4"/>
+                        {/*<img src="/images/friends.png" alt="#" className="image-right"/>*/}
                     </div>
                 </div>
             </section>
