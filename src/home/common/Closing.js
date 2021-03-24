@@ -10,7 +10,7 @@ function Closing() {
                         <p className="paragraph-description">Embark on a journey</p>
 
                         <div className="element-cta layout-flex">
-                            <a href="#" className="element-button button-standard button-first">
+                            <a href="/" className="element-button button-standard button-first">
                                 Sign up now</a>
                             <p className="small-text"><small>Studer is free.</small></p>
                         </div>

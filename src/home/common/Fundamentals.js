@@ -51,7 +51,7 @@ function Fundamentals () {
 
                     <div className="element-cta element-cta-main layout-flex">
                         <p>Every journey has a starting point</p>
-                        <a href="#" className="element-button button-standard button-first">
+                        <a href="/" className="element-button button-standard button-first">
                             Create a free account</a>
                     </div>
                 </div>
