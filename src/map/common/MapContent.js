@@ -9,7 +9,6 @@ function MapContent(props) {
     const [places, setPlaces] = useState([]);
     const [centerLatitude, setCenterLatitude] = useState(50.059391);
     const [centerLongitude, setCenterLongitude] = useState(19.937222);
-    let [position, setPosition] = useState(null);
 
     useEffect(() => {
         GetMapLocations(props.categories, centerLatitude, centerLongitude, RADIUS)
@@ -20,17 +19,30 @@ function MapContent(props) {
         const map = useMapEvents({
             click: () => {
                 map.locate().on("locationfound", function (e) {
-                    position = e.latlng;
-                    const circle = L.circle(position, {radius: 250});
-                    circle.addTo(map);
-                    setPosition(position);
-                    map.flyTo(position)
-                })
+                        let position = e.latlng;
+                        const circle = L.circle(position, {radius: 250, weight: 5, fill: false});
+                        circle.addTo(map);
+                        map.flyTo(position)
+                    }
+                )
             },
             locationfound: (location) => {
                 console.log('Location found:', location)
             },
         })
+        return null;
+    }
+
+    function SetMapPosition() {
+        const map = useMapEvents({
+                moveend: () => {
+                    let center = map.getCenter()
+                    setCenterLatitude(center.lat);
+                    setCenterLongitude(center.lng);
+                    console.log("Center:", center);
+                },
+            }
+        )
         return null;
     }
 
@@ -57,6 +69,7 @@ function MapContent(props) {
                     </Marker>
                 ))}
                 <UsersLocation/>
+                <SetMapPosition/>
             </MapContainer>
         </>
     );
