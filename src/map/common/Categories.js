@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {GetMapCategories} from "../services/MapApiService"
 import {CategoryModel} from "../model/CategoryModel";
 
-function Categories() {
+function Categories(props) {
 
     const [categories, setCategories] = useState([]);
 
@@ -19,6 +19,12 @@ function Categories() {
         categoriesCopy.filter(category => category.type === e.target.id)
             .map(category => category.isChecked = e.target.checked)
         setCategories(categoriesCopy);
+        props.onCategoriesSelect(prepareCategoriesDTO(categoriesCopy));
+    }
+
+    function prepareCategoriesDTO(categories) {
+        return categories.filter(category => category.isChecked)
+            .map(category => category.type);
     }
 
     return (
@@ -30,7 +36,6 @@ function Categories() {
                             <input type="checkbox" id={category?.type} value={category?.type}
                                    onClick={handleCheckboxChange}/>
                             <label htmlFor={category?.type}>{category?.name} {category?.isChecked}</label>
-                            {/*{JSON.stringify(category)}*/}
                         </div>
                     ))}
                 </div>
