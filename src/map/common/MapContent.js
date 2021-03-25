@@ -64,15 +64,16 @@ function MapContent(props) {
                             <div>
                                 <h4>{place.name}</h4>
                                 <p>{place.description}</p>
+                                <p><b>Address:</b> {place.address.street} {place.address.streetNumber}, {place.address.town}</p>
                             </div>
                         </Popup>
                     </Marker>
-                ))}
-                <UsersLocation/>
-                <SetMapPosition/>
-            </MapContainer>
-        </>
-    );
-}
+                    ))}
+                    <UsersLocation/>
+                    <SetMapPosition/>
+                    </MapContainer>
+                    </>
+                    );
+                }
 
-export default MapContent;
+                export default MapContent;
