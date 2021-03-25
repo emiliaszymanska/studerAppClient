@@ -24,7 +24,7 @@ label {
 .checkbox-wrapper {
   padding: 1rem;
   column-gap: 0.5rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   justify-items: start;
   overflow: hidden;
   text-decoration: none;
@@ -87,12 +87,28 @@ label {
 }
 
 @media screen and (min-width: 48rem) {
+  #map-id {
+    height: 50vh;
+  }
+
+  .checkbox-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .Toastify__toast-container--top-right {
     margin-top: 6rem;
   }
 }
 
 @media screen and (min-width: 75rem) {
+  #map-id {
+    height: 80vh;
+  }
+
+  .checkbox-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .Toastify__toast-container--top-right {
     margin-top: 5rem;
   }
