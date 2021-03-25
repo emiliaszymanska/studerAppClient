@@ -54,3 +54,29 @@ label {
   padding: 1.05rem 1.9rem;
   color: $color-7;
 }
+
+.button-location {
+  z-index: 500;
+  position: absolute;
+  top: 5rem;
+  left: 0.65rem;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  border: solid 2px rgb(184, 182, 179);
+  background-color: rgba(234, 252, 120, 0.8);
+}
+
+.fa-location-arrow {
+  padding-top: 0.1rem;
+  padding-right: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.map-wrapper {
+  position: relative;
+}
