@@ -1,0 +1,47 @@
+.content-buddy-finder {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  text-align: left;
+  background-color: $color-background-second;
+}
+
+.buddy-finder-header {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  flex-direction: column;
+  align-items: start;
+}
+
+#search-bar {
+  padding: 0.5rem 1rem;
+  width: 20rem;
+  color: black;
+  background-color: $color-8;
+  border: none;
+  outline: none;
+  border-bottom-left-radius: $radius-button;
+  border-top-left-radius: $radius-button;
+}
+
+#search-button {
+  padding: 0.5rem 0.6rem;
+  width: 3rem;
+  background-color: $color-8;
+  border-bottom-right-radius: $radius-button;
+  border-top-right-radius: $radius-button;
+  border: none;
+  outline: none;
+}
+
+input[type=text] {
+  padding: 0.5rem;
+}
+
+input::placeholder {
+  color: $color-main;
+}
+
+#search-button > i {
+  background-color: transparent;
+  color: $color-main;
+}
