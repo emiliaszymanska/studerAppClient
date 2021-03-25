@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {MapContainer, TileLayer, Marker, Popup, useMapEvents} from 'react-leaflet';
 import {GetMapLocations} from "../services/MapApiService";
-import {ToastContainer, toast} from 'react-toastify';
+import {ToastContainer, toast, Slide} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import L from 'leaflet';
 
@@ -74,10 +74,21 @@ function MapContent(props) {
                             </Popup>
                         </Marker>
                     ))}
-                    {/*<UsersLocation/>*/}
                     <MapEvents/>
                 </MapContainer>
-                <ToastContainer/>
+                <ToastContainer
+                    position="top-right"
+                    transition={Slide}
+                    autoClose={3000}
+                    limit={1}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable={false}
+                    pauseOnHover
+                />
             </div>
         </>
     );

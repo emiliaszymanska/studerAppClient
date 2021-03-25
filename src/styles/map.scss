@@ -66,6 +66,7 @@ label {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  outline: none;
   border-radius: 4px;
   border: solid 2px rgb(184, 182, 179);
   background-color: rgba(234, 252, 120, 0.8);
@@ -79,4 +80,20 @@ label {
 
 .map-wrapper {
   position: relative;
+}
+
+.Toastify__toast-container--top-right {
+  margin-top: 6.7rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .Toastify__toast-container--top-right {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .Toastify__toast-container--top-right {
+    margin-top: 5rem;
+  }
 }
