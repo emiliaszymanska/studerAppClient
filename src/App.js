@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollRestoration from "./environment/ScrollRestoration";
 import Header from "./shared/header/Header";
 import Home from "./home/Home";
 import Map from "./map/Map";
@@ -9,6 +10,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 function App() {
     return (
         <Router>
+            <ScrollRestoration/>
             <Header/>
             <Switch>
                 <Route path="/" exact component={Home}/>
