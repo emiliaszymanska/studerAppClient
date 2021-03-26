@@ -112,7 +112,8 @@
   }
 
   .video-left {
-    max-width: 90%;
+    max-width: 85%;
+    justify-self: start;
     border-right: 3rem solid rgba(143, 205, 240, 0.3);
   }
 
