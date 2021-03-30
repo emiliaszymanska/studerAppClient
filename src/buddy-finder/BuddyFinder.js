@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import BuddyFinderHeader from "./common/BuddyFinderHeader";
 import BuddyFinderFilter from "./common/BuddyFinderFilter";
 import BuddyFinderAd from "./common/BuddyFinderAd";
+import {UserAdModel} from "./models/UserAdModel";
+import {GetUsersAds} from "./services/BuddyFinderService";
 
 function BuddyFinder() {
 
-    const a = [1, 2, 3];
+    const [usersAds, setUsersAds] = useState([]);
+
+    useEffect(() => {
+        GetUsersAds().then(res => {
+            const usersAdsModel = res?.data?.map(item => new UserAdModel(item))
+            setUsersAds(usersAdsModel)
+        });
+    }, []);
 
     return (
         <>
@@ -13,7 +22,7 @@ function BuddyFinder() {
                 <div className="layout-container">
                     <BuddyFinderHeader/>
                     <BuddyFinderFilter/>
-                    {a.map(item => <BuddyFinderAd/>)}
+                    {usersAds.map(item => <BuddyFinderAd userAd={item}/>)}
                 </div>
             </section>
         </>
