@@ -1,6 +1,6 @@
 import * as moment from 'moment';
 
-export class UserAdModel {
+export class AdModel {
 
     userAdId;
     name;
