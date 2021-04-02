@@ -4,6 +4,7 @@ import Header from "./shared/header/Header";
 import Home from "./home/Home";
 import Map from "./map/Map";
 import BuddyFinder from "./buddy-finder/BuddyFinder";
+import BuddyFinderAdDetails from "./buddy-finder/BuddyFinderAdDetails";
 import Footer from "./shared/Footer";
 
 function App() {
@@ -12,8 +13,9 @@ function App() {
             <Header/>
             <Switch>
                 <Route path="/" exact component={Home}/>
-                <Route path="/map" component={Map}/>
-                <Route path="/buddy" component={BuddyFinder}/>
+                <Route path="/map" exact component={Map}/>
+                <Route path="/buddy" exact component={BuddyFinder}/>
+                <Route path="/buddy/:id" exact component={BuddyFinderAdDetails}/>
             </Switch>
             <Footer/>
         </Router>
