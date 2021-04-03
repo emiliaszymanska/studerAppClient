@@ -7,15 +7,23 @@
 .element-button {
   display: block;
   border-radius: $radius-button;
+  border: none;
   font-weight: 700;
   line-height: 1;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .button-standard {
   width: fit-content;
   padding: 0.85rem 1.2rem;
+}
+
+.button-wide {
+  width: fit-content;
+  padding: 0.85rem 1.4rem;
 }
 
 .button-first {

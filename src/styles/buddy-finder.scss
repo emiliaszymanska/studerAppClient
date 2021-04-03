@@ -2,7 +2,7 @@
   padding-top: 7rem;
   padding-bottom: 7rem;
   text-align: left;
-  background-color: $color-background-second;
+  background: url("images/stripes.png");
 }
 
 .buddy-finder-header {
@@ -12,29 +12,38 @@
   align-items: start;
 }
 
+#search-and-filter-container {
+  display: flex;
+}
+
 #search-bar {
+  height: 2.5rem;
   padding: 0.5rem 1rem;
-  width: 20rem;
-  color: black;
-  background-color: $color-8;
-  border: none;
-  outline: none;
+  margin-bottom: 2rem;
+  color: $color-main;
+  background-color: white;
+  border: $color-8 solid 2px;
+  border-right: none;
   border-bottom-left-radius: $radius-button;
   border-top-left-radius: $radius-button;
+  outline: none;
 }
 
 #search-button {
-  padding: 0.5rem 0.6rem;
+  height: 2.5rem;
   width: 3rem;
-  background-color: $color-8;
+  margin-bottom: 2rem;
+  border: $color-8 solid 2px;
+  border-left: none;
   border-bottom-right-radius: $radius-button;
   border-top-right-radius: $radius-button;
-  border: none;
+  cursor: pointer;
   outline: none;
 }
 
 input[type=text] {
-  padding: 0.5rem;
+  font-size: 1rem;
+  color: $color-4;
 }
 
 input::placeholder {
@@ -44,4 +53,52 @@ input::placeholder {
 #search-button > i {
   background-color: transparent;
   color: $color-main;
+}
+
+.ad-container {
+  width: 38rem;
+  margin: 1rem 0;
+  padding: 1.5rem 1rem 1.2rem 1rem;
+  grid-template-columns: 1.7fr 1fr;
+  column-gap: 0.5rem;
+  row-gap: 0.2rem;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  background-color: rgba(203, 203, 203, 0.4);
+}
+
+.person-details {
+  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 0.1rem;
+  line-height: 1.6rem;
+}
+
+.person-details > p {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.date {
+  margin: 0 1rem;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  justify-self: start;
+  align-self: end;
+}
+
+.profile-picture {
+  width: 10rem;
+  justify-self: center;
+  align-self: center;
+  border-radius: $radius-card;
+}
+
+.button-user-details {
+  margin-top: 0.5rem;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+  align-self: center;
 }
