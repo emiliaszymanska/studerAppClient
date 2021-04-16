@@ -84,17 +84,6 @@
    ELEMENTS
   ------------------------------------------------*/
   /*------------------------------------------------
-   IMAGE
-  ------------------------------------------------*/
-  .image-left {
-    padding-right: $layout-main-space;
-  }
-
-  .image-right {
-    padding-left: $layout-main-space;
-  }
-
-  /*------------------------------------------------
    VIDEO
   ------------------------------------------------*/
   .main-video-wrapper {
@@ -286,23 +275,6 @@
 
   .content-hero-header > h1 {
     font-size: $font-h1;
-  }
-
-  /*------------------------------------------------
-   FEATURES
-  ------------------------------------------------*/
-  .image-left {
-    max-width: 80%;
-    padding-right: initial;
-    margin-left: initial;
-    justify-self: start;
-    border-right: 4rem solid $color-6;
-  }
-
-  .image-right {
-    max-width: 100%;
-    padding-left: initial;
-    border-left: 2rem solid $color-8;
   }
 }
 

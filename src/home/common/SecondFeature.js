@@ -20,7 +20,6 @@ function SecondFeature() {
                             </div>
                         </div>
                         <video className="video-right" autoPlay loop muted playsInline src="videos/friends.mp4"/>
-                        {/*<img src="/images/friends.png" alt="#" className="image-right"/>*/}
                     </div>
                 </div>
             </section>
