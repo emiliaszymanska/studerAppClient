@@ -20,6 +20,7 @@
      FONTS
     ----------------------------------------------*/
     /* FONT MARGIN */
+    $font-margin-heading: 1.3rem;
     $font-margin-body: 1.25rem;
 
     /* FONT SIZE */
@@ -62,6 +63,7 @@
   }
 
   h2 {
+    margin-bottom: $font-margin-heading;
     font-size: $font-h2;
   }
 
@@ -95,19 +97,30 @@
   /*------------------------------------------------
    VIDEO
   ------------------------------------------------*/
-  //.video-left {
-  //  max-width: 80%;
-  //  padding-right: initial;
-  //  margin-left: initial;
-  //  border-right: 4rem solid rgba(143, 205, 240, 0.3);
-  //  justify-self: start;
-  //}
-  //
-  //.video-right {
-  //  max-width: 100%;
-  //  padding-left: initial;
-  //  border-left: 2rem solid rgba(202, 245, 174, 0.9);
-  //}
+  .main-video-wrapper {
+    height: 50vh;
+  }
+
+  .main-video-wrapper > video {
+    width: 100%;
+    height: 95%;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 95%;
+  }
+
+  .video-left {
+    max-width: 85%;
+    justify-self: start;
+    border-right: 3rem solid rgba(143, 205, 240, 0.3);
+  }
+
+  .video-right {
+    max-width: 100%;
+    border-left: 1.5rem solid rgba(202, 245, 174, 0.9);
+  }
 
   /*------------------------------------------------
    CONTENT
@@ -177,6 +190,10 @@
     grid-row-start: initial;
   }
 
+  .first-paragraph, .second-paragraph {
+    margin-bottom: 0.8rem;
+  }
+
   /*------------------------------------------------
    FOOTER
   ------------------------------------------------*/
@@ -202,6 +219,7 @@
      FONTS
     ----------------------------------------------*/
     /* FONT MARGIN */
+    $font-margin-heading: 1.25rem;
     $font-margin-body: 1.25rem;
 
     /* FONT SIZE */
@@ -238,6 +256,7 @@
   }
 
   h2 {
+    margin-bottom: $font-margin-heading;
     font-size: $font-h2;
   }
 
@@ -307,13 +326,13 @@
      FONTS
     ----------------------------------------------*/
     /* FONT MARGIN */
-    $font-margin-heading: 1rem;
+    $font-margin-heading: 1.25rem;
     $font-margin-body: 1.75rem;
 
     /* FONT SIZE */
     $font-h1: 2.75rem;
     $font-h2: 2.2rem;
-    $font-h3: 1.4rem;
+    $font-h3: 1.35rem;
     $font-strong: 1.5rem;
 
   /*------------------------------------------------
@@ -372,6 +391,31 @@
   .button-standard {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  /*------------------------------------------------
+   VIDEO
+  ------------------------------------------------*/
+  .main-video-wrapper {
+    height: 97vh;
+  }
+
+  .main-video-wrapper > video {
+    height: 100%;
+  }
+
+  .overlay {
+    height: 100%;
+  }
+
+  .video-left {
+    max-width: 80%;
+    border-right: 4rem solid rgba(143, 205, 240, 0.3);
+  }
+
+  .video-right {
+    max-width: 100%;
+    border-left: 3rem solid rgba(202, 245, 174, 0.9);
   }
 
   /*------------------------------------------------
@@ -437,6 +481,10 @@
   .content-feature--layout:last-of-type {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .first-paragraph, .second-paragraph {
+    margin-bottom: 1rem;
   }
 
   /*------------------------------------------------

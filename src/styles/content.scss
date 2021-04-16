@@ -9,7 +9,7 @@
   padding-bottom: 1.25rem;
   padding-top: 1.25rem;
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   background-color: $color-background-first;
   border-bottom: 1px solid rgb(216, 216, 216);
 }
@@ -91,6 +91,7 @@
  5.2 HERO
 ----------------------------------------------------*/
 .content-hero {
+  position: relative;
   padding-top: 5rem;
   padding-bottom: 2rem;
   text-align: center;
@@ -175,8 +176,28 @@
   margin-bottom: 1rem;
 }
 
+.first-paragraph, .second-paragraph {
+  margin-bottom: 0.6rem;
+}
+
+.one-word {
+  font-weight: 600;
+}
+
 .content-feature-second {
   background-color: $color-background-second;
+}
+
+.feature-second-wrapper {
+  margin: 0.7rem 1rem;
+}
+
+.feature-second-list {
+  list-style: none;
+}
+
+.fa-check {
+  color: $color-7;
 }
 
 /*----------------------------------------------------
