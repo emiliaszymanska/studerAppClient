@@ -33,6 +33,13 @@ body {
   display: flex;
 }
 
+.layout-flex-inline {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .layout-grid {
   display: grid;
 }

@@ -1,0 +1,69 @@
+.ad-details-main-container {
+  margin-top: 4rem;
+  flex-direction: column;
+}
+
+.name-user {
+  font-family: $font-heading;
+  font-size: 2rem;
+  color: $color-font-heading-inner;
+  margin-bottom: 2rem;
+}
+
+.ad-details-main-wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ad-details-wrapper {
+  width: 70%;
+  padding: 1rem;
+  grid-template-columns: 3fr 1fr;
+  background-color: rgba(203, 203, 203, 0.2);
+}
+
+.ad-details-line {
+  width: 30%;
+  border-top: 0.15rem solid $color-main;
+  margin-bottom: 2rem;
+}
+
+.ad-details-left {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2rem;
+}
+
+.ad-description {
+  margin-bottom: 3rem;
+}
+
+.ad-id {
+  font-size: 0.8rem;
+}
+
+.ad-details-right {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.ad-details-right-inner {
+  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 0.1rem;
+  line-height: 1.3rem;
+  font-size: 0.85rem;
+}
+
+.ad-details-right-inner > p {
+  margin-bottom: 0;
+  font-weight: 700;
+}

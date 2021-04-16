@@ -4,7 +4,7 @@ import Header from "./shared/header/Header";
 import Home from "./home/Home";
 import Map from "./map/Map";
 import BuddyFinder from "./buddy-finder/BuddyFinder";
-import BuddyFinderAdDetails from "./buddy-finder/BuddyFinderAdDetails";
+import BuddyFinderAdDetails from "./buddy-finder/common/BuddyFinderAdDetails";
 import Footer from "./shared/Footer";
 
 function App() {
