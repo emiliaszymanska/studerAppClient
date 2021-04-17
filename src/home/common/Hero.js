@@ -8,7 +8,6 @@ function Hero() {
                     <video autoPlay loop muted playsInline src="videos/girl-stairs.mp4"/>
                     <div className="overlay"/>
                 </div>
-                {/*<img src="/images/girl-stairs.png" loading="lazy" alt="#" className="hero-image"/>*/}
                 <div className="content-hero-header">
                     <h1>Are you feeling<br/>a bit lost?</h1>
                 </div>
