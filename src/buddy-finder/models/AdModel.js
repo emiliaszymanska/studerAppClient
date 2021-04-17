@@ -4,7 +4,7 @@ export class AdModel {
 
     userAdId;
     name;
-    sex;
+    gender;
     age;
     city;
     university;
@@ -18,7 +18,7 @@ export class AdModel {
     constructor(data) {
         this.userAdId = data?.id;
         this.name = `${data?.user?.firstName} ${data?.user?.lastName}`; // TODO: refactor
-        this.sex = 'Female'; // TODO
+        this.gender = 'Female'; // TODO
         this.age = this.calculateAge(1301554977); // timestamp
         this.city = data?.city;
         this.university = data?.university;

@@ -8,7 +8,7 @@ function BuddyFinderFilter() {
         label: '25 - 28'
     }];
 
-    const selectSex = [{value: 'female', label: 'Female'}, {value: 'male', label: 'Male'}, {
+    const selectGender = [{value: 'female', label: 'Female'}, {value: 'male', label: 'Male'}, {
         value: 'other',
         label: 'Other'
     }];
@@ -28,7 +28,7 @@ function BuddyFinderFilter() {
                     </div>
                     <div className="layout-flex-inline">
                         <BuddyFinderFilterElement title={'Age'} options={selectAge}/>
-                        <BuddyFinderFilterElement title={'Sex'} options={selectSex}/>
+                        <BuddyFinderFilterElement title={'Gender'} options={selectGender}/>
                         <BuddyFinderFilterElement title={'Language'} options={selectLanguage}/>
                     </div>
                 </div>

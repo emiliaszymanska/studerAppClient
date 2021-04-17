@@ -9,7 +9,7 @@ function BuddyFinderAd({userAd}) {
                 <div className="ad-container layout-grid">
                     <div className="person-details">
                         <p>Name:</p><span>{userAd?.name}</span>
-                        <p>Sex:</p><span>{userAd?.sex}</span>
+                        <p>Gender:</p><span>{userAd?.gender}</span>
                         <p>Age:</p><span>{userAd?.age}</span>
                         <p>City:</p><span>{userAd?.city}</span>
                         <p>University:</p><span>{userAd?.university}</span>
