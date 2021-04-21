@@ -1,6 +1,7 @@
 import React from 'react';
+import FundamentalsElement from "./FundamentalsElement";
 
-function Fundamentals () {
+function Fundamentals() {
     return (
         <>
             <section className="content-fundamentals">
@@ -9,44 +10,19 @@ function Fundamentals () {
                     <p className="paragraph-description">That's what we believe in</p>
 
                     <div className="content-fundamentals--layout layout-grid layout-grid-3">
-                        <div className="element-card element-card--fundamentals">
-                            <div className="element-wrapper layout-grid">
-                                <img className="card-image" src="/icons/lifebelt.svg" alt="Lifebelt icon"/>
-                                <span className="card-header"><strong>Support</strong></span>
-                                <span className="card-intro"><small>Feel comfortable</small></span>
-                            </div>
-                            <ul className="element-list element-list--fundamentals layout-grid">
-                                <li>Make new friends</li>
-                                <li>Get first-hand information</li>
-                                <li>Begin your adventure safely</li>
-                            </ul>
-                        </div>
-
-                        <div className="element-card element-card--fundamentals">
-                            <div className="element-wrapper layout-grid">
-                                <img className="card-image" src="/icons/lighthouse.svg" alt="Lighthouse icon"/>
-                                <span className="card-header"><strong>Guidance</strong></span>
-                                <span className="card-intro"><small>We're here to help you</small></span>
-                            </div>
-                            <ul className="element-list element-list--fundamentals layout-grid">
-                                <li>Get some useful tips</li>
-                                <li>Manage your time efficiently</li>
-                                <li>Discover many possibilities</li>
-                            </ul>
-                        </div>
-
-                        <div className="element-card element-card--fundamentals">
-                            <div className="element-wrapper layout-grid">
-                                <img className="card-image" src="/icons/light-bulb.svg" alt="Light-bulb icon"/>
-                                <span className="card-header"><strong>Ideas</strong></span>
-                                <span className="card-intro"><small>Be inspired</small></span>
-                            </div>
-                            <ul className="element-list element-list--fundamentals layout-grid">
-                                <li>Find fantastic places</li>
-                                <li>Enrich your stay abroad</li>
-                                <li>Make an impact</li>
-                            </ul>
-                        </div>
+                        <FundamentalsElement src={"/icons/lifebelt.svg"} altText={"Lifebelt"} headerText={"Support"}
+                                             introText={"Feel comfortable"} firstElement={"Make new friends"}
+                                             secondElement={"Get first-hand information"}
+                                             thirdElement={"Begin your adventure safely"}/>
+                        <FundamentalsElement src={"/icons/lighthouse.svg"} altText={"Lighthouse"}
+                                             headerText={"Guidance"}
+                                             introText={"We're here to help you"} firstElement={"Get some useful tips"}
+                                             secondElement={"Manage your time efficiently"}
+                                             thirdElement={"Discover many possibilities"}/>
+                        <FundamentalsElement src={"/icons/light-bulb.svg"} altText={"Light-bulb"} headerText={"Ideas"}
+                                             introText={"Be inspired"} firstElement={"Find fantastic places"}
+                                             secondElement={"Enrich your stay abroad"}
+                                             thirdElement={"Make an impact"}/>
                     </div>
 
                     <div className="element-cta element-cta-main layout-flex">
