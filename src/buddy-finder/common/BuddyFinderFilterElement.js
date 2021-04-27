@@ -1,13 +1,13 @@
 import React from "react";
 import Select from "react-select";
 
-function BuddyFinderFilterElement({title, options}) {
+function BuddyFinderFilterElement({title, options, onChange}) {
     return (
         <>
-            <div>
-                <div>{title}</div>
+            <div className="select-inner-wrapper-options">
+                <div className="select-title">{title}</div>
                 <div>
-                    <Select options={options}/>
+                    <Select isMulti options={options} onChange={e => onChange(e.map(item => item.value))}/>
                 </div>
             </div>
         </>

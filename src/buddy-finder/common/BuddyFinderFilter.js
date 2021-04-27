@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import BuddyFinderFilterElement from "./BuddyFinderFilterElement";
 
 function BuddyFinderFilter() {
+
+    const [selectedAge, setSelectedAge] = useState([]);
+    const [selectedGender, setSelectedGender] = useState([]);
+    const [selectedLanguage, setSelectedLanguage] = useState([]);
 
     const selectAge = [{value: '19-21', label: '19 - 21'}, {value: '22-24', label: '22 - 24'}, {
         value: '25-28',
@@ -20,16 +24,21 @@ function BuddyFinderFilter() {
 
     return (
         <>
-            <form id="search-and-filter-container">
+            {JSON.stringify(selectedAge)}
+            {JSON.stringify(selectedGender)}
+            {JSON.stringify(selectedLanguage)}
+            <form className="search-and-filter-container layout-flex">
                 <div className="search-main-wrapper layout-flex">
                     <div className="layout-flex-inline">
-                        <input id="search-bar" type="text" placeholder="Type in..." name="search"/>
-                        <button id="search-button" type="submit"><i className="fa fa-search"/></button>
+                        <input className="buddy-search-bar" type="text" placeholder="Type in..." name="search"/>
+                        <button className="buddy-search-button" type="submit"><i className="fa fa-search"/></button>
                     </div>
-                    <div className="layout-flex-inline">
-                        <BuddyFinderFilterElement title={'Age'} options={selectAge}/>
-                        <BuddyFinderFilterElement title={'Gender'} options={selectGender}/>
-                        <BuddyFinderFilterElement title={'Language'} options={selectLanguage}/>
+                    <div className="select-inner-wrapper layout-grid">
+                        <BuddyFinderFilterElement title={'Select age'} options={selectAge} onChange={setSelectedAge}/>
+                        <BuddyFinderFilterElement title={'Select gender'} options={selectGender}
+                                                  onChange={setSelectedGender}/>
+                        <BuddyFinderFilterElement title={'Select language'} options={selectLanguage}
+                                                  onChange={setSelectedLanguage}/>
                     </div>
                 </div>
             </form>
