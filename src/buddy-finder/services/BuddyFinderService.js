@@ -1,12 +1,17 @@
 import axios from "axios";
 import {API_URL} from "../../environment/Config";
 
-export const GetAds = () => {
+export const GetAds = (selectedFilters) => {
     return axios
-        .get(`${API_URL}api/advertisement`);
+        .post(`${API_URL}api/advertisement/filter`, selectedFilters);
 }
 
 export const GetAd = (id) => {
     return axios
         .get(`${API_URL}api/advertisement/${id}`);
+}
+
+export const GetFilterCategories = () => {
+    return axios
+        .get(`${API_URL}api/advertisement/criteria`);
 }
