@@ -1,32 +1,45 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import BuddyFinderFilterElement from "./BuddyFinderFilterElement";
+import {GetFilterCategories} from "../services/BuddyFinderService";
+import {FilterCategoryModel, FilterCategoryModelToDTO} from "../models/FilterCategoryModel";
 
-function BuddyFinderFilter() {
+function BuddyFinderFilter({setSelectedFilters}) {
 
-    const [selectedAge, setSelectedAge] = useState([]);
-    const [selectedGender, setSelectedGender] = useState([]);
-    const [selectedLanguage, setSelectedLanguage] = useState([]);
+    const [selectAge, setSelectAge] = useState([]);
+    const [selectGender, setSelectGender] = useState([]);
+    const [selectLanguage, setSelectLanguage] = useState([]);
 
-    const selectAge = [{value: '19-21', label: '19 - 21'}, {value: '22-24', label: '22 - 24'}, {
-        value: '25-28',
-        label: '25 - 28'
-    }];
+    useEffect(() => {
+        GetFilterCategories().then(res => {
+            const filterCategoriesModel = res?.data?.map(item => new FilterCategoryModel(item));
+            filterCategoriesModel.forEach(item => {
+                switch (item?.type) {
+                    case 'AGE':
+                        assignSelectValue(item, selectAge, setSelectAge);
+                        break;
+                    case 'GENDER':
+                        assignSelectValue(item, selectGender, setSelectGender);
+                        break;
+                    case 'LANGUAGE':
+                        assignSelectValue(item, selectLanguage, setSelectLanguage);
+                        break;
+                    default:
+                        break;
+                }
+            })
+        });
+    }, []);
 
-    const selectGender = [{value: 'female', label: 'Female'}, {value: 'male', label: 'Male'}, {
-        value: 'other',
-        label: 'Other'
-    }];
+    const assignSelectValue = (item, selector, setSelector) => {
+        const newValue = selector;
+        newValue.push(item);
+        setSelector([...newValue]);
+    }
 
-    const selectLanguage = [{value: 'english', label: 'English'}, {value: 'french', label: 'French'}, {
-        value: 'spanish',
-        label: 'Spanish'
-    }];
+    const onFilterClick = () => setSelectedFilters(FilterCategoryModelToDTO([...selectAge, ...selectGender, ...selectLanguage]));
 
     return (
         <>
-            {JSON.stringify(selectedAge)}
-            {JSON.stringify(selectedGender)}
-            {JSON.stringify(selectedLanguage)}
             <form className="search-and-filter-container layout-flex">
                 <div className="search-main-wrapper layout-flex">
                     <div className="layout-flex-inline">
@@ -34,14 +47,15 @@ function BuddyFinderFilter() {
                         <button className="buddy-search-button" type="submit"><i className="fa fa-search"/></button>
                     </div>
                     <div className="select-inner-wrapper layout-grid">
-                        <BuddyFinderFilterElement title={'Select age'} options={selectAge} onChange={setSelectedAge}/>
+                        <BuddyFinderFilterElement title={'Select age'} options={selectAge} onChange={setSelectAge}/>
                         <BuddyFinderFilterElement title={'Select gender'} options={selectGender}
-                                                  onChange={setSelectedGender}/>
+                                                  onChange={setSelectGender}/>
                         <BuddyFinderFilterElement title={'Select language'} options={selectLanguage}
-                                                  onChange={setSelectedLanguage}/>
+                                                  onChange={setSelectLanguage}/>
                     </div>
                 </div>
             </form>
+            <button onClick={onFilterClick}>Filter</button>
         </>
     );
 }
