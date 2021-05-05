@@ -15,3 +15,8 @@ export const GetFilterCategories = () => {
     return axios
         .get(`${API_URL}api/advertisement/criteria`);
 }
+
+export const GetSuggestion = (suggestion) => {
+    return axios
+        .get(`${API_URL}api/advertisement/search/${suggestion}`);
+}

@@ -14,8 +14,4 @@ export class FilterCategoryModel {
 }
 
 export const FilterCategoryModelToDTO = (modelList) => (modelList || [])
-    .filter(item => item.isSelected)
-    .map(item => ({
-        category: item.type,
-        phrase: item.value?.join(',')
-    }));
+    .filter(item => item.isSelected);
