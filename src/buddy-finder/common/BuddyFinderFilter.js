@@ -2,8 +2,8 @@ import React, {useState, useEffect} from "react";
 import BuddyFinderFilterElement from "./BuddyFinderFilterElement";
 import {GetFilterCategories, GetSuggestion} from "../services/BuddyFinderService";
 import {FilterCategoryModel, FilterCategoryModelToDTO} from "../models/FilterCategoryModel";
-import {Subject} from "rxjs";
-import {filter, debounceTime, distinctUntilChanged} from "rxjs/operators";
+import {from, Subject} from "rxjs";
+import {filter, debounceTime, distinctUntilChanged, switchMap, map, tap} from "rxjs/operators";
 
 const inputStream$ = new Subject();
 
@@ -37,10 +37,12 @@ function BuddyFinderFilter({setSelectedFilters}) {
             .pipe(
                 filter(s => s.length > 0),
                 debounceTime(600),
-                distinctUntilChanged()
+                distinctUntilChanged(),
+                switchMap(enteredSuggestion => from(GetSuggestion(enteredSuggestion))),
+                map(apiResult => apiResult.data.flatMap(item => item)),
+                tap(value => console.log(value))
             )
-            .subscribe(value => GetSuggestion(value)
-                .then(res => console.log(res)));
+            .subscribe()
         return () => {
             inputStreamSubscriber.unsubscribe();
         }
