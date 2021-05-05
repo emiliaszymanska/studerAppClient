@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from "react";
 import BuddyFinderFilterElement from "./BuddyFinderFilterElement";
-import {GetFilterCategories} from "../services/BuddyFinderService";
+import {GetFilterCategories, GetSuggestion} from "../services/BuddyFinderService";
 import {FilterCategoryModel, FilterCategoryModelToDTO} from "../models/FilterCategoryModel";
+import {Subject} from "rxjs";
+import {filter, debounceTime, distinctUntilChanged} from "rxjs/operators";
+
+const inputStream$ = new Subject();
 
 function BuddyFinderFilter({setSelectedFilters}) {
 
@@ -28,6 +32,18 @@ function BuddyFinderFilter({setSelectedFilters}) {
                 }
             })
         });
+
+        const inputStreamSubscriber = inputStream$
+            .pipe(
+                filter(s => s.length > 0),
+                debounceTime(600),
+                distinctUntilChanged()
+            )
+            .subscribe(value => GetSuggestion(value)
+                .then(res => console.log(res)));
+        return () => {
+            inputStreamSubscriber.unsubscribe();
+        }
     }, []);
 
     const assignSelectValue = (item, selector, setSelector) => {
@@ -43,7 +59,8 @@ function BuddyFinderFilter({setSelectedFilters}) {
             <form className="search-and-filter-container layout-flex">
                 <div className="search-main-wrapper layout-flex">
                     <div className="layout-flex-inline">
-                        <input className="buddy-search-bar" type="text" placeholder="Type in..." name="search"/>
+                        <input className="buddy-search-bar" onChange={(e) => inputStream$.next(e.target.value)}
+                               type="text" placeholder="Type in..." name="search"/>
                         <button className="buddy-search-button" type="submit"><i className="fa fa-search"/></button>
                     </div>
                     <div className="select-inner-wrapper layout-grid">
