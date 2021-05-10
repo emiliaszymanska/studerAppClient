@@ -58,12 +58,12 @@ function BuddyFinderFilter({setSelectedFilters}) {
 
     return (
         <>
-            <form className="search-and-filter-container layout-flex">
+            <div className="search-and-filter-container layout-flex">
                 <div className="search-main-wrapper layout-flex">
                     <div className="layout-flex-inline">
                         <input className="buddy-search-bar" onChange={(e) => inputStream$.next(e.target.value)}
                                type="text" placeholder="Type in..." name="search"/>
-                        <button className="buddy-search-button" type="submit"><i className="fa fa-search"/></button>
+                        <button onClick={onFilterClick} className="buddy-search-button" type="submit"><i className="fa fa-search"/></button>
                     </div>
                     <div className="select-inner-wrapper layout-grid">
                         <BuddyFinderFilterElement title={'Select age'} options={selectAge} onChange={setSelectAge}/>
@@ -73,8 +73,7 @@ function BuddyFinderFilter({setSelectedFilters}) {
                                                   onChange={setSelectLanguage}/>
                     </div>
                 </div>
-            </form>
-            <button onClick={onFilterClick}>Filter</button>
+            </div>
         </>
     );
 }
