@@ -2,6 +2,7 @@ import React from "react";
 import ScrollRestoration from "./environment/ScrollRestoration";
 import Header from "./shared/header/Header";
 import Home from "./home/Home";
+import Profile from "./profile/Profile";
 import Map from "./map/Map";
 import Footer from "./shared/Footer";
 
@@ -13,8 +14,9 @@ function App() {
             <ScrollRestoration/>
             <Header/>
             <Switch>
-                <Route path="/" exact component={Home}/>
+                <Route path="/profile" exact component={Profile}/>
                 <Route path="/map" component={Map}/>
+                <Route path="/" exact component={Home}/>
             </Switch>
             <Footer/>
         </Router>
