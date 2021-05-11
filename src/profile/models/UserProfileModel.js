@@ -1,5 +1,4 @@
 export class UserProfileModel {
-
     id;
     name;
     gender;
@@ -14,7 +13,7 @@ export class UserProfileModel {
         this.id = data?.id;
         this.name = data?.name;
         this.gender = data?.gender;
-        this.age = data?.age;
+        this.age = data?.birthDate;
         this.university = data?.university;
         this.city = data?.city;
         this.languages = data?.languages;
