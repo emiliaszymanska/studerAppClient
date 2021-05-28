@@ -27,7 +27,7 @@ function ImageUploader() {
             .then(() => toast(`Image loaded successfully`))
             .then((res) => {
                 // res.data
-                const mockedImageName = "dziewczyna";
+                const mockedImageName = "example-image";
                 setImage(mockedImageName);
                 setUploading(false);
             })
